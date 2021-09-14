@@ -6,6 +6,7 @@ use JWTAuth;
 use Request;
 use Auth;
 use DB;
+use Hash;
 
 
 use App\Http\Controllers\Controller;
@@ -66,5 +67,13 @@ class LoginController extends Controller
    {
       return $usu;
    }
-
+   /*
+   public function getReset()
+   {
+      $pass = Hash::make(789);
+      $cons = 'UPDATE users SET password=? WHERE id=1';
+      $res = DB::update($cons, [$pass]);
+      return $res;
+   }
+   */
 }
